@@ -1,3 +1,5 @@
+FORKED FROM: https://github.com/vkcom/vk-java-sdk
+
 ## Java SDK for VK API
 
 [![Build Status](https://travis-ci.org/VKCOM/vk-java-sdk.svg?branch=master)](https://travis-ci.org/VKCOM/vk-java-sdk)

@@ -12,7 +12,9 @@ import com.vk.api.sdk.objects.Validable;
 import java.io.IOException;
 import java.io.StringReader;
 import java.lang.reflect.Type;
+import java.util.Arrays;
 import java.util.Map;
+import java.util.logging.LogManager;
 
 /**
  * Created by tsivarev on 21.07.16.
@@ -128,9 +130,15 @@ public abstract class ApiRequest<T> {
         }
     }
 
+
     public String executeAsString() throws ClientException {
         ClientResponse response;
         try {
+//            System.out.println("--------------");
+//            System.out.println(url);
+//            System.out.println(getBody());
+//            System.out.println(Arrays.toString(getHeaders()));
+//            System.out.println("--------------");
             response = client.post(url, getBody(), getHeaders());
         } catch (IOException e) {
             LOG.error("Problems with request: " + url, e);

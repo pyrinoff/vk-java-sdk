@@ -16,6 +16,7 @@ import java.io.InputStream;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Base64;
 import java.util.Objects;
 
@@ -38,7 +39,7 @@ public class GetCaptchaSimple {
                 if (is != null) { is.close(); }
             }
         }
-        else return Files.readAllBytes(Path.of(urlOrPath));
+        else return Files.readAllBytes(Paths.get(urlOrPath));
     }
 
 
