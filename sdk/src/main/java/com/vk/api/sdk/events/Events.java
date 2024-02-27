@@ -129,7 +129,11 @@ public enum Events {
     USER_UNBLOCK(UserUnblock.class),
 
     @SerializedName("confirmation")
-    CONFIRMATION(null);
+    CONFIRMATION(null),
+
+    @SerializedName("vkpay_transaction")
+    VK_PAY_TRANSACTION(VkPayTransaction.class)
+    ;
 
     private final Type type;
 
