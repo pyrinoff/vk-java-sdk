@@ -183,6 +183,10 @@ public abstract class EventsHandler {
         LOG.error(OVERRIDING_ERR);
     }
 
+    protected void vkPayTransaction(Integer groupId, VkPayTransaction message) {
+        LOG.error(OVERRIDING_ERR);
+    }
+
     protected String parse(CallbackMessage message) {
         switch (message.getType()) {
             case CONFIRMATION:
@@ -300,6 +304,9 @@ public abstract class EventsHandler {
                 break;
             case POLL_VOTE_NEW:
                 pollVoteNew(message.getGroupId(), designateObject(message.getObject(), message.getType()));
+                break;
+            case VK_PAY_TRANSACTION:
+                vkPayTransaction(message.getGroupId(), designateObject(message.getObject(), message.getType()));
                 break;
             default:
                 LOG.error("Unexpected callback event type received");
