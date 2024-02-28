@@ -132,7 +132,7 @@ public enum Events {
     CONFIRMATION(null),
 
     @SerializedName("vkpay_transaction")
-    VK_PAY_TRANSACTION(VkPayTransaction.class)
+    VKPAY_TRANSACTION(VkPayTransaction.class)
     ;
 
     private final Type type;

@@ -305,11 +305,11 @@ public abstract class EventsHandler {
             case POLL_VOTE_NEW:
                 pollVoteNew(message.getGroupId(), designateObject(message.getObject(), message.getType()));
                 break;
-            case VK_PAY_TRANSACTION:
+            case VKPAY_TRANSACTION:
                 vkPayTransaction(message.getGroupId(), designateObject(message.getObject(), message.getType()));
                 break;
             default:
-                LOG.error("Unexpected callback event type received");
+                LOG.error("Unexpected callback event type received, message: " + message);
                 return null;
         }
         return "OK";
