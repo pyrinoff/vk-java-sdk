@@ -7,7 +7,7 @@ import java.util.Objects;
 
 public class resolveTestCaptcha {
     public static void main(String[] args) {
-        String filenameOrUrl = "https://api.vk.com//captcha.php?sid=723412182770";
+        String filenameOrUrl = "https://api.vk.ru//captcha.php?sid=723412182770";
         String apiKey = "YOUR_API_KEY_HERE";
         //String expectedResult = "ab54qc"; //cant check result if it is some dynamic link
 
